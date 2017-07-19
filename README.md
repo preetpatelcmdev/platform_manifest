@@ -13,11 +13,11 @@ Initializing Repository
 
 Initiate core trees without any device/kernel/vendor:
 
-    $ repo init -u https://github.com/AOKP/platform_manifest.git -b nougat
+    $ repo init -u https://github.com/preetpatelcmdev/platform_manifest.git -b nougat --no-clone-bundle --depth=1
 
 Sync the repository:
 
-    $ repo sync --force-sync
+    $ repo sync -j$( nproc --all ) --force-sync -c --no-clone-bundle --no-tags --optimized-fetch --prune
 
 ***
 
